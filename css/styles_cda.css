@@ -1,0 +1,252 @@
+body{
+    font-family: sans-serif;
+    background-color:#fff;
+    position: relative;
+    padding-bottom:25em;
+    min-height: 100vh;
+}
+
+
+
+.border{
+  color: #d2aa58;
+  text-shadow: -1px -1px 0 #d2aa58,
+  1px 1px 0 ,#d2aa58
+  1px 1px 0 #d2aa58,
+  -1px 1px 0 #d2aa58
+  ;
+  
+  
+    font-size: 10vw;
+  position: absolute;
+}
+.wavy{
+  color: #008080;
+  animation: wave 3s ease-in-out infinite;
+  
+  
+    font-size: 10vw;
+  position: absolute;
+}
+@keyframes wave{
+0%, 100%{
+  clip-path: polygon(
+    0% 47%,
+    10% 48%,
+    33% 54%,
+    54% 60%,
+    70% 61%,
+    84% 59%,
+    100% 52%,
+    100% 100%,
+    0% 100%
+
+  );
+  
+}
+50%{
+  clip-path: polygon(
+    0% 60%,
+    15% 65%,
+    34% 66%,
+    51% 62%,
+    67% 50%,
+    84% 45%,
+    100% 46%,
+    100% 100%,
+    0% 100%
+  );
+}
+}
+.encabezado-cda{
+  width: 100%;
+  height: 40vw;
+  min-height: 525px;
+  background-image: url("../assets/cascada.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  overflow: hidden;
+  position: relative;
+  
+} 
+
+
+.text-1{
+color: aliceblue;
+  background-color: #6096b4;
+    margin-top: 0;
+    margin: 0;
+    padding: 2.5vw;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 25pt;
+}
+.parrafo{
+  justify-content: center;
+    font-family:  sans-serif;
+    font-size: 20pt;
+    color: #6a6a6a;
+    margin-top: 10px;
+    padding: 20px;
+    
+    width: 100%;
+    height: 6vw;
+    
+    
+}
+
+
+
+
+
+.h2-enc{
+  margin-top: 10vh;
+  color: #6a6a6a;
+  margin-left: 3vw;
+  font-size: 25pt;
+}
+.contenedor-t{
+  width: 100%;
+  display: flex;
+  /* max-width: 1100px;  */
+   /* flex-direction:row; */
+   
+}
+.cont-target{
+  width:100% ;
+  display: flex;
+   /* max-width: 1100px;  */
+}
+.card{
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0px 1px 10px rgba(0,0, 0,0.2  );
+  cursor: default;
+  transition: 400ms ease;
+
+}
+.card .contenido{
+  padding: 15px;
+  text-align: center;
+}
+.card .contenido p{
+  line-height: 1.5;
+  color: #6a6a6a;
+}
+.cont-target   :hover{
+  
+transform: translateY(-3%);
+}
+
+.card img{
+  width: 15vw;
+  height: 20vw;
+}
+
+
+.actividades{
+  border-radius: 30px;
+  margin-top: 3.5vw;
+  padding:5px;
+  height: 80vh;
+   background:linear-gradient(#8ea7e9, #6096b4); 
+  
+}
+.enc-3{
+  color: aliceblue;
+  margin-top: 6vw;
+  margin-left: 3vw;
+  font-family: sans-serif;
+  font-size: 35pt;
+
+}
+.parrafo1{
+  color: azure;
+  margin: 5px;
+  margin-left: 1vw;
+  padding:3px;
+  margin-top: 9vw;
+  font-size: 20pt;
+  font-family:  sans-serif;
+
+}
+.img-circulo{
+ margin-top: 0vh; 
+  width: 100%;
+  height: 100px;
+  /* background-color: #008080; */
+}
+.img-circulo img{
+  margin-top: 0px;
+  margin-left: 85vh;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+
+}
+.videos{
+  margin-top: 10vh;
+  display: flex;
+  padding:1vw;
+}
+.videos.video{
+  width: 100%;
+  padding: 1vw;
+  margin-left: 30px;
+  
+
+
+}
+.footer {
+  background-image: url("../assets/cascada.jpg"); 
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ width: 100%;
+ height: 350px;
+ position: absolute;
+ bottom: 0;
+ 
+}
+.footer::before {
+ content: "";
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ height: 350px;
+ background-image: linear-gradient(120deg, #7286d3, c);
+ opacity: 60%;
+}
+.text_footer_Borde{
+
+  background-color: #fff;
+  color: #d2aa58;
+  text-shadow: -1px -1px 0 #d2aa58,
+  1px 1px 0 ,#d2aa58
+  1px 1px 0 #d2aa58,
+  -1px 1px 0 #d2aa58;
+    font-size: 35pt;
+    font-weight: 700;
+    margin-top: 25vh;
+    margin-left: 0px;
+  position: absolute;  
+}
+.text_footer{
+  color: #008080;
+  animation: wave 3s ease-in-out infinite;
+    font-size: 35pt;
+    font-weight: 700;
+  position: absolute;
+  margin-top: 25vh;
+  margin-left: 0px;
+
+}
+

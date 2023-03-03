@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.header {
+  width: 100%;
+  height: 40vw;
+  min-height: 525px;
+  background-image: url("../assets/img_header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(120deg, #7286d3, #bdcdd6);
+  opacity: 60%;
+}
+.header__nav {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  right: 20px;
+  width: 40vw;
+  max-width: 280px;
+  justify-content: space-between;
+  top: 10px;
+}
+.header__nav--item {
+  --path:polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  text-decoration: none;
+  color: #f5f5f5;
+  display: flex;
+  height: 30px;
+  width: 100%;
+  border-radius: 19px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  position: relative;
+  transition: clip-path 0.5s ease-in-out;
+  z-index: 1;
+}
+.header__nav--item::before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  position: absolute;
+  background-image: linear-gradient(#7286d3, #8ea7e9);
+  font-weight: 700;
+  clip-path: var(--path);
+  z-index: -1;
+  transition: clip-path 0.5s ease-in-out;
+}
+.header__nav--item:hover {
+  --path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.header__article {
+  position: relative;
+  z-index: 1;
+}
+.header__article--gota {
+  background-image: url("../assets/gota__odapas.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+  margin-top: 1%;
+  height: 45vw;
+  min-height: 400px;
+  width: 40vw;
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__wave {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  user-select: none;
+}
+.header__title {
+  color: #f5f5f5;
+  width: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 5vh;
+}
+
+.menu {
+  position: relative;
+  z-index: 1;
+  background-image: url("../assets/menu__icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.activador__menu {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 11;
+  }
+  .header {
+    overflow: visible;
+    display: block;
+  }
+  #menu:checked + .header__nav {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header__nav {
+    transition: clip-path 1s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    background-image: linear-gradient(120deg, #7286d3, #6096b4);
+    font-size: 5vh;
+    max-width: none;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+  .header__nav--item {
+    width: max-content;
+    padding: 20px;
+    transition: all 0.5s ease;
+  }
+  .header__nav--item:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    color: #6096b4;
+  }
+  .header__nav--item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    clip-path: var(--path);
+    transition: clip-path 0.5s ease-in-out;
+  }
+  .header__title {
+    display: inline;
+    padding-left: 10px;
+  }
+}
+.p1 {
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.p1__logo {
+  border-radius: 50%;
+  height: 250px;
+  margin-bottom: 10px;
+}
+.p1__title {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.p1__parahraph {
+  font-weight: 600;
+  padding-bottom: 25px;
+}
+
+.p1__logo {
+  width: 250px;
+  height: 250px;
+  background-image: url("../assets/Gotin1_001.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 700px) {
+  .p1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .p1__logo {
+    height: 200px;
+    width: 200px;
+  }
+}
+.p2 {
+  background-color: #8ea7e9;
+  height: 100% vw;
+  width: 100%;
+  padding: 20px;
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+}
+.p2__title {
+  font-size: 3vw;
+  width: 100%;
+}
+.p2__paragraph {
+  width: 90%;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 15px;
+}
+.p2__slider {
+  background-color: #eee9da;
+  width: 90vw;
+  height: 20vw;
+  border-radius: 20px;
+  position: relative;
+  animation: slide 20s infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  --cliph:circle(0% at 50% 50%);
+}
+@keyframes slide {
+  0% {
+    background-image: url("../assets/lavar carro.webp");
+  }
+  25% {
+    background-image: url("../assets/aguasalta.jpg");
+  }
+  50% {
+    background-image: url("../assets/grifo.webp");
+  }
+  75% {
+    background-image: url("../assets/cascada.jpg");
+  }
+  100% {
+    background-image: url("../assets/lavar manos.webp");
+  }
+}
+.p2__slider::before {
+  content: "Cultura del agua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 154, 154, 0.537254902);
+  border-radius: 20px;
+  clip-path: var(--cliph);
+  transition: all 0.5s ease;
+}
+.p2__slider:hover {
+  --cliph:circle(70.7% at 50% 50%);
+}
+
+@media (max-width: 700px) {
+  .p2 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .p2__title {
+    font-size: 5vh;
+  }
+  .p2__slider {
+    height: 250px;
+  }
+  .p2__slider::before {
+    font-size: 10vw;
+  }
+}
+body {
+  --activad1: circle(0.0% at 100% 50%);
+  --ot: scale(0);
+}
+
+.opci {
+  --trans: translate(70%, -50%);
+  height: 250px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 50px;
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  top: 50%;
+  transform: var(--trans);
+  background-color: #7286d3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.5s ease;
+}
+.opci:hover {
+  --trans: translate(0%, -50%);
+}
+.opci__item {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #eee9da;
+  transition: background-color 0.5s ease;
+}
+.opci__item:hover {
+  background-color: #93bfcf;
+}
+.opci__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #008080;
+  border-radius: 50%;
+  transform: var(--ot);
+}
+
+.opci__item--1 {
+  background-image: url("../assets/home.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+.opci__item--2 {
+  background-image: url("../assets/cuidado.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+.opci__item--3 {
+  background-image: url("../assets/anuncios.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
+
+.panel--cerrar {
+  display: block;
+  background-image: url("../assets/cerrar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s ease;
+}
+.panel--cerrar:hover {
+  transform: scale(1.2);
+}
+
+.footer {
+  background-image: url("../assets/img_header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  bottom: 0;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 350px;
+  background-image: linear-gradient(120deg, #7286d3, #bdcdd6);
+  opacity: 60%;
+}
+.footer::after {
+  content: "<FCA>";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(120deg, #7286d3, #bdcdd6);
+}
+.footer__wave {
+  position: relative;
+  z-index: 1;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  height: 1700px;
+  font-family: "Archivo", sans-serif;
+  position: relative;
+}
+
+/*# sourceMappingURL=styleMain.css.map */

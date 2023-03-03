@@ -1,0 +1,9 @@
+@mixin centrarBack($tipo){
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: $tipo;
+}
+@mixin centrarMargin(){
+    margin-left: auto;
+    margin-right: auto;
+}

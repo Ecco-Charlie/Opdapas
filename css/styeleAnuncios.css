@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  --activad1: circle(0.0% at 100% 50%);
+  --ot: scale(0);
+}
+
+.opci {
+  --trans: translate(70%, -50%);
+  height: 250px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 50px;
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  top: 50%;
+  transform: var(--trans);
+  background-color: #7286d3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.5s ease;
+}
+.opci:hover {
+  --trans: translate(0%, -50%);
+}
+.opci__item {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #eee9da;
+  transition: background-color 0.5s ease;
+}
+.opci__item:hover {
+  background-color: #93bfcf;
+}
+.opci__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #008080;
+  border-radius: 50%;
+  transform: var(--ot);
+}
+
+.opci__item--1 {
+  background-image: url("../assets/home.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+.opci__item--2 {
+  background-image: url("../assets/cuidado.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+.opci__item--3 {
+  background-image: url("../assets/anuncios.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
+
+.panel--cerrar {
+  display: block;
+  background-image: url("../assets/cerrar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s ease;
+}
+.panel--cerrar:hover {
+  transform: scale(1.2);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: "Archivo", sans-serif;
+  position: relative;
+  background: url("../assets/img_header.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: max-content;
+  color: #f5f5f5;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(120deg, #7286d3, #bdcdd6);
+  opacity: 60%;
+}
+
+.container {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  padding: 10px;
+}
+
+h2:nth-child(2n) {
+  background-color: #6096b4;
+}
+
+h2 {
+  padding: 15px;
+}
+
+article {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5vw;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+h2 {
+  background-color: #7286d3;
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+
+/*# sourceMappingURL=styeleAnuncios.css.map */

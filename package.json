@@ -1,0 +1,41 @@
+{
+  "name": "pag-opdapas-colab-main",
+  "version": "1.0.0",
+  "description": "Base de datos con mySQL",
+  "main": "database.js",
+  "dependencies": {
+    "anymatch": "^3.1.3",
+    "bignumber.js": "^9.0.0",
+    "binary-extensions": "^2.2.0",
+    "braces": "^3.0.2",
+    "chokidar": "^3.5.3",
+    "core-util-is": "^1.0.3",
+    "fill-range": "^7.0.1",
+    "glob-parent": "^5.1.2",
+    "immutable": "^4.2.4",
+    "inherits": "^2.0.4",
+    "is-binary-path": "^2.1.0",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "is-number": "^7.0.0",
+    "isarray": "^1.0.0",
+    "mysql": "^2.18.1",
+    "normalize-path": "^3.0.0",
+    "picomatch": "^2.3.1",
+    "process-nextick-args": "^2.0.1",
+    "readable-stream": "^2.3.7",
+    "readdirp": "^3.6.0",
+    "safe-buffer": "^5.1.2",
+    "sass": "^1.58.0",
+    "source-map-js": "^1.0.2",
+    "sqlstring": "^2.3.1",
+    "string_decoder": "^1.1.1",
+    "to-regex-range": "^5.0.1",
+    "util-deprecate": "^1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Emmmanuel Beltrán González",
+  "license": "ISC"
+}
